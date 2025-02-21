@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+  int int_val = 23;
+  unsigned int unsigned_val = 2343;
+  signed int signed_val = -234;
+  long int l_int = 2342432;
+
+  cout << "int size " << sizeof(int_val) << endl;
+  cout << "unsign size " << sizeof(unsigned_val) << endl;
+  cout << "sign size " << sizeof(signed_val) << endl;
+  cout << "long int size " << sizeof(l_int) << endl;
+
+  cout << endl;
+  cout << endl;
+
+  float float_val = 32.34f;
+  double double_val = 234.343;
+
+  int i = 121.921;
+  cout << "integer value " << i << endl;
+
+  // unsigned int u_i = -231;
+  unsigned u_i = 231; // unsigned int => unsigned
+  // greater number
+  cout << "unsigned value " << u_i << endl;
+
+  signed int val = -12232;
+  cout << "signed " << val << endl;
+
+  float f = 2323.34f;
+  cout << "float value " << f << endl;
+
+  bool b = true;
+  cout << b << endl;
+  cout << true << endl;
+  cout << false << endl;
+
+  char c = 'a';
+  cout << "value " << c << endl;
+
+  c = 'abdmefrv';
+  cout << "value " << (int)c << endl;
+
+  int ch = 'a';
+  // 1701212790
+  cout << "val is " << ch << endl;
+
+  char cola = 234567;
+  cout << cola << endl;
+
+  return 0;
+}
