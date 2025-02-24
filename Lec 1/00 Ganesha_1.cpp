@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -30,6 +30,20 @@ int main()
   signed int val = -12232;
   cout << "signed " << val << endl;
 
+  int num1;
+
+  num1 = 02567;
+  cout << num1 << endl;
+
+  num1 = 077;
+  cout << num1 << endl;
+
+  num1 = 0xaa;
+  cout << num1 << endl;
+
+  num1 = 0xab;
+  cout << num1 << endl;
+
   float f = 2323.34f;
   cout << "float value " << f << endl;
 
@@ -50,6 +64,19 @@ int main()
 
   char cola = 234567;
   cout << cola << endl;
+
+  string str = "";
+  getline(cin, str); // reads the string until new line
+  cout << str << endl;
+
+  double pi = 3.14159265358979323846;
+  cout << "default " << pi << endl;
+
+  // setPrecision
+  cout << setprecision(4) << pi << endl;
+
+  // fixed setPrecision
+  cout << fixed << setprecision(4) << pi << endl;
 
   return 0;
 }

@@ -26,6 +26,26 @@ int main()
   /*
       <  ,  >  , >= , <= , == , !=
   */
+  int m = 3, n = 4;
+  bool first = (m == n);
+  cout << "first " << first << endl;
+
+  bool second = (m > n);
+  cout << "second " << second << endl;
+
+  bool third = (m < n);
+  cout << "third " << third << endl;
+
+  bool fourth = (m >= n);
+  cout << "fourth " << fourth << endl;
+
+  bool five = (m <= n);
+  cout << "fiveth " << five << endl;
+
+  bool six = (m != n);
+  cout << "six " << six << endl
+       << endl
+       << endl;
 
   // logical return 0 or 1
   /*
@@ -59,7 +79,8 @@ int main()
   int x = 5, y;
   y = x++ * x++;
   cout << "value " << x << endl;
-  cout << "value " << y << endl;
+  cout << "value " << y << endl
+       << endl;
 
   // assignment operator
   int cnt = 1;
@@ -72,27 +93,35 @@ int main()
 
   cnt = 1;
   cnt += 1;
-  cout << "count " << cnt << endl;
+  cout << "count " << cnt << endl
+       << endl;
 
-  // shifting operator <<  , >>
+  // shifting operator <<  , >> returns a value
   int c_val = 2;
   c_val <<= 2;
-  cout << "value is " << c_val << endl;
+  cout << "shiftting is " << c_val << endl;
 
   c_val = 8;
-  cout << (c_val >> 2) << endl;
+  cout << "(8 >> 2) " << (c_val >> 2) << endl
+       << endl;
 
-  // bitwise operator & | ^ ~
+  // bitwise operator & | ^ ~ returns a value
   int val1 = 10, val2 = 6;
 
   cout << "Bitwise & " << (val1 & val2) << endl;
   cout << "Bitwise | " << (val1 | val2) << endl;
   cout << "Bitwise ^ " << (val1 ^ val2) << endl;
-  cout << "Bitwise ~ " << (~val1) << endl;
+  cout << "Bitwise ~ " << (~val1) << endl
+       << endl;
+
+  x = 0, y = 1;
+  val =  0 & x++;
+  cout << "value " << val << endl;
+  cout << "x " << x << endl;
 
   // Ternary operator
   string str = (10 > 4) ? "yes" : "no";
-  cout << str << endl; 
+  cout << "(10 > 4) " << str << endl;
 
   return 0;
 }

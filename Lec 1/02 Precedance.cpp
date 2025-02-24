@@ -9,9 +9,10 @@ int main()
     int init = -8;
     cout << "value is " << (12 * 12 / 6 % 2) << endl;
 
-    int x = 3 + 3 * 4 * 3 / 6 / 4* 3 - 2;
+    int x = 3 + 3 * 4 * 3 / 6 / 4 * 3 - 2;
     cout << "val x " << x << endl;
 
+    cout << (int)5.0 / 2 << endl;
 
     return 0;
 }
