@@ -62,8 +62,7 @@ int main()
     // else
     //     cout << "Power of 2";
 
-    // ************* 6
-    // //number of 1'a in number
+    // ************* 6 number of 1'a in number
     // int n;
     // cout << "returns the number of 1's ";
     // cin >> n;
@@ -90,16 +89,29 @@ int main()
 
     // *************(1) set the number's ith bit :
 
-    cout << "set the number's ith bit : " << endl;
-    int num = 12, bit;
-    cin >> bit;
-    cout << "before num : " << num << endl;
+    // cout << "set the number's ith bit : " << endl;
+    // int num = 12, bit;
+    // cin >> bit;
+    // cout << "before num : " << num << endl;
 
-    bit = 1 << (bit - 1);
-    num = num | bit;
+    // bit = 1 << (bit - 1);
+    // num = num | bit;
 
-    cout << "set the number of " << bit << "th bit" << endl;
-    cout << "after num : " << num << endl;
+    // cout << "set the number of " << bit << "th bit" << endl;
+    // cout << "after num : " << num << endl;
+
+    // ********** NOT **********
+    int num = 16;
+    num = ~num;
+    cout << "the number is " << num << endl;
+
+    // ********** XOR **********
+    int num1 = 5, num2 = 12;
+    cout << (num1 ^ num2) << endl;
+
+    // (1) toggling/filiping the bit
+    int val = 0b001001;
+    cout << (1 ^ val) << endl;
 
     return 0;
 }

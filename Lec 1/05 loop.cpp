@@ -5,7 +5,15 @@ int main()
 {
 
         // *********** while ***********
-        // sum of n
+        /*
+                Syntaxt
+
+                while(condition){
+
+                }
+        */
+
+        // even sum of n
         int num, sum = 0;
         cin >> num;
 
@@ -514,6 +522,70 @@ int main()
         //         cout << endl;
         //         row++;
         // }
+
+        /*
+                syntaxt
+                for(intilization; condi; update){}
+        */
+
+        // valid syntaxt
+        // for(; cond; upd){}
+        // for(; ; upd){}
+        // for(; ; ){}
+
+        // for(int a = 0, b=1; cond; upd){}
+        // for(int a = 0, b=1; a<10,b<10 ;  upd){}
+        // for(int a = 0, b=1; a<10,b<10 ;  a++ , b++){}
+
+        // invalid
+        // for(){}
+
+        // for (int first = 0, second = 0; second < 5 && first < 10; first++, second++)
+        //         cout << "never run the code first " << first << " second " << second << endl;
+
+        // (1) sum of n number
+        // number = 0;
+        // cin >> number;
+
+        // sum = 0;
+        // for (int i = 1; i <= number; i++)
+        // {
+        //         sum += i;
+        // }
+        // cout << "The sum of " << number << " is " << sum << endl;
+
+        // cout << "code ends here" << endl;
+
+        // (2) fibonachhi
+        // number = 10;
+        // int a = -1, b = 1;
+
+        // // 0 1 1 2 3 5 8 13 21 34
+        // for (int i = 1; i <= number; i++)
+        // {
+        //         int fib = a + b;
+        //         a = b;
+        //         b = fib;
+        //         cout << fib << " ";
+        // }
+
+        // **********  continue **********
+        // for (int i = 0; i < 10; i++)
+        // {
+        //         cout << "first line" << endl;
+        //         continue; // skip the loop
+        //         cout << "second line" << endl;
+        // }
+
+        // **********  break **********
+        for (int i = 0; i < 10; i++)
+        {
+                cout << "first line" << endl;
+                break; // break the loop
+                cout << "second line" << endl;
+        }
+
+ 
 
         return 98;
 }

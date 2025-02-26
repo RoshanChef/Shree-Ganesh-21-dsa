@@ -31,18 +31,24 @@ int main()
   cout << "signed " << val << endl;
 
   int num1;
-
+  // octal
   num1 = 02567;
   cout << num1 << endl;
 
   num1 = 077;
   cout << num1 << endl;
 
+  // hexa-decimal
   num1 = 0xaa;
   cout << num1 << endl;
 
   num1 = 0xab;
   cout << num1 << endl;
+
+  // binary number
+  num1= 0b10011; 
+  cout<< num1 << endl;
+  
 
   float f = 2323.34f;
   cout << "float value " << f << endl;
