@@ -523,6 +523,19 @@ int main()
         //         row++;
         // }
 
+        /* (23)
+                1 2 3 4 4 3 2 1
+                1 2 3 * * 3 2 1
+                1 2 * * * * 2 1
+                1 * * * * * * 1
+         */
+        number = 4;
+        row = 1;
+        while (row <= number)
+        {
+              
+        }
+
         /*
                 syntaxt
                 for(intilization; condi; update){}
@@ -585,7 +598,5 @@ int main()
                 cout << "second line" << endl;
         }
 
- 
-
-        return 98;
+         return 98;
 }

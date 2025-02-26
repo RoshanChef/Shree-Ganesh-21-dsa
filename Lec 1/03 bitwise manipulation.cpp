@@ -109,7 +109,7 @@ int main()
     int num1 = 5, num2 = 12;
     cout << (num1 ^ num2) << endl;
 
-    // (1) toggling/filiping the bit
+    // (1) toggling/filiping the last bit & returns whole num
     int val = 0b001001;
     cout << (1 ^ val) << endl;
 

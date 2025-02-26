@@ -9,7 +9,7 @@ string decimal_binary_string(int num)
     while (num > 0)
     {
         ans += (num % 2 == 0 ? '0' : '1');
-        num /= 2;
+        num >>= 1;
     }
     reverse(ans.begin(), ans.end());
     return ans;
