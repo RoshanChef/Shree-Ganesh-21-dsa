@@ -3,6 +3,13 @@ using namespace std;
 
 int power_a_b(int a, int b)
 {
+    int ans = 1;
+    
+    // O(b)
+    for (int i = 0; i < b >> 1; i++)
+        ans *= a;
+
+    return (b % 2) ? ans * ans * a : ans * ans;
 }
 
 int main()
@@ -11,6 +18,7 @@ int main()
     cin >> a >> b;
 
     int ans = power_a_b(a, b);
+    cout << "Result " << ans;
 
     return 0;
 }
