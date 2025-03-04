@@ -1,14 +1,30 @@
 #include <iostream>
 using namespace std;
 
+void reverse(int ar[], int size)
+{
+    int start = 0, end = size - 1;
+    while (start <= end)
+        swap(ar[start++], ar[end--]);
+}
+
 int main()
 {
 
-    int a = 5, b = 8;
-    cout << "before : \na => " << a << " b => " << b << endl;
+    int ar[] = {2, 7, 9, 10, 12, 19};
+    int len = sizeof(ar) / sizeof(int);
 
+    cout << "before : ";
 
-    cout << "after : \na => " << a << " b => " << b << endl;
+    for (int i = 0; i < len; i++)
+        cout << ar[i] << " ";
+
+    reverse(ar, len);
+
+    cout << endl
+         << "after : ";
+    for (int i = 0; i < len; i++)
+        cout << ar[i] << " ";
 
     return 0;
 }

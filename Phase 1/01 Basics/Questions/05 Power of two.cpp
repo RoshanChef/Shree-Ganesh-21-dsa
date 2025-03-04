@@ -6,12 +6,10 @@ bool power_2(int num)
 {
     if (num <= 0)
         return false;
-    int power = 1;
     for (int i = 0; i <= 30; i++)
     {
-        if (power == num)
+        if (1 << i == num)
             return true;
-        power *= 2;
     }
 
     return false;
@@ -29,7 +27,7 @@ int main()
 {
 
     int input = 15;
-    if (power_2(INT32_MIN))
+    if (power_2(128))
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
