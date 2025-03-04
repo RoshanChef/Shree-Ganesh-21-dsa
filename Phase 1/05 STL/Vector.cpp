@@ -84,5 +84,38 @@ int main()
         cout << endl;
     }
 
+    // 2d of 10*20
+    vector<vector<int>> walk(10, vector<int>(20, 0));
+    cout << "2d size " << walk.size() << endl;
+
+    // using array
+    vector<int> arr[4];
+
+    // 1d
+    vector<int> _v(7, 12);
+
+    // 2D vector: 10
+    vector<vector<int>> _v1(10, vector<int>(5));
+
+    // 3D vector: 15x20x5
+    vector<vector<vector<int>>> _v2(15, vector<vector<int>>(20, vector<int>(5)));
+
+    // 4D vector: 12x15x20x5
+    vector<vector<vector<vector<int>>>> _v3(12, vector<vector<vector<int>>>(15, vector<vector<int>>(20, vector<int>(5))));
+
+    cout << _v3[0][0][0].size() << endl;
+
+    vector<int> ans = {10, 20, 30, 40, 50};
+    cout << "Before " << endl;
+    for (int ele : ans)
+        cout << ele << " ";
+
+    ans.resize(3, 19);
+
+    cout << endl;
+    cout << "After " << endl;
+    for (int ele : ans)
+        cout << ele << " ";
+
     return 0;
 }
