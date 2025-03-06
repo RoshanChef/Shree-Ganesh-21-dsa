@@ -117,5 +117,21 @@ int main()
     for (int ele : ans)
         cout << ele << " ";
 
+    // size vs capacity
+    vector<int> vacc;
+    vacc.push_back(10);
+    vacc.push_back(20);
+    vacc.push_back(20);
+    vacc.push_back(20);
+    vacc.push_back(20);
+    cout << vacc.capacity() << endl;
+    cout << vacc.size() << endl;
+
+    // insert
+    vector<int> vr = {2, 3, 5};
+    vr.insert(vr.begin() + 2, 10);
+    for (auto ele : vr)
+        cout << ele << endl;
+
     return 0;
 }
