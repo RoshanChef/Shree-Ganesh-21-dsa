@@ -9,7 +9,7 @@ void sortZeroesAndOne(int input[], int size)
     {
         if (input[st] == 0)
             st++;
-        else if (input[end] == 1)
+        if (input[end] == 1)
             end--;
         else
             swap(input[st], input[end]);
@@ -44,7 +44,7 @@ int main()
         cout << ele << " ";
 
     sortZeroesAndOne(array, n);
-    
+
     cout << endl;
     cout << "After" << endl;
     for (auto ele : array)
