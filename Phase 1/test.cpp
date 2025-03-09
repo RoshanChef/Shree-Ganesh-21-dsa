@@ -3,21 +3,17 @@ using namespace std;
 
 int main()
 {
+    int i = 10;
+    i < 20;
+    cout << i << endl;
+    cout << "hello roshan";
 
-    multiset<int> st;
-    st.insert(6);
-    st.insert(6);
-    st.insert(6);
-    st.insert(3);
-    st.insert(2);
-    st.insert(3);
-    st.insert(5);
-
-    for (auto it : st)
+    int i = 10;
+    // printing i
+    while (i > 0)
     {
-        cout<< it << " ";
+        cout << i << endl;
     }
-    
 
     return 0;
 }
