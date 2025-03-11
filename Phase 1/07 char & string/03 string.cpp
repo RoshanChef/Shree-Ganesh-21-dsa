@@ -55,6 +55,7 @@ int main()
     cout << res.back() << endl;
     cout << res.at(3) << endl;
     cout << res << endl;
+    
     cout << res.substr(0, 4) << endl; // remember
 
     // comparison

@@ -4,7 +4,8 @@ using namespace std;
 
 
 int main()
-{
+{   
+    // char array are mutable
 
     // char ch[100];
     // cin >> ch;
