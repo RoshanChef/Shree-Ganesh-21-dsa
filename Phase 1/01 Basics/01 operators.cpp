@@ -65,7 +65,7 @@ int main()
 
      cout << "value " << val << endl;
 
-     // Pre-increment  , Pre=decrement
+     // Pre-increment  , Pre-decrement
      int in_a = 2, in_b = 2;
      // in_a++, in_b++;
 

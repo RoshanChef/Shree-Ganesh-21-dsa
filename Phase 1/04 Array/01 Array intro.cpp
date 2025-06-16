@@ -39,6 +39,13 @@ int main()
 
     // int len = sizeof(arr) / sizeof(int);
 
+    /*
+        int arr[5] = {10 , 20, 30 , 40 , 50};
+
+        address(arr) = base + { index - baseIndex * size of data type }
+        baseIndex = here is 0. it can be anything
+    */
+
     char ch[4] = {'a', 'b', 'c', 'd'};
     for (int i = 0; i < 4; i++)
         cout << ch[i] << " ";

@@ -4,6 +4,8 @@ using namespace std;
 int main()
 {
     int currency;
+    cout << "Enter the currency : ";
+
     cin >> currency;
 
     int _100 = 0;
@@ -34,7 +36,6 @@ int main()
             _20 += currency / 20;
             currency = currency % 20;
             break;
-            
 
         case 10:
             _10 += currency / 10;
@@ -45,7 +46,6 @@ int main()
             cout << "Please give valid currency " << endl;
             break;
         }
-
     }
 
     cout << "100 notes " << _100 << endl;

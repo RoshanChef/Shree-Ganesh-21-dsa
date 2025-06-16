@@ -2,11 +2,36 @@
 
 using namespace std;
 
+// find function in cpp
+int finddi(string hay, string needle)
+{
+    int l1 = hay.length();
+    int l2 = needle.length();
+
+    for (int i = 0; i <= l1 - l2; i++)
+    {
+        bool flag = true;
+        for (int j = 0; j < l2; j++)
+        {
+            if (hay[i + j] != needle[j])
+            {
+                flag = false;
+                break;
+            }
+        }
+
+        if (flag)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int main()
 {
 
-    // strings are mutable in cpp 
-
+    // strings are mutable in cpp
 
     // delimiter in string
     // string str;
@@ -55,7 +80,7 @@ int main()
     cout << res.back() << endl;
     cout << res.at(3) << endl;
     cout << res << endl;
-    
+
     cout << res.substr(0, 4) << endl; // remember
 
     // comparison
@@ -84,10 +109,9 @@ int main()
     str.replace(0, 4, word);
     cout << str << endl;
 
-    // erase    
+    // erase
     str = "Roshan is there for some reason I have";
     cout << str.erase(1, 5) << endl;
 
-    
     return 0;
 }

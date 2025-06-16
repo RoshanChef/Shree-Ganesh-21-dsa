@@ -2,8 +2,7 @@
 using namespace std;
 string check(int num, int bit)
 {
-    int check_bit = 1;
-    check_bit = check_bit << bit - 1;
+    int check_bit =1 << bit - 1;
 
     if (check_bit & num)
         return "bit is set";
@@ -34,7 +33,7 @@ int main()
     // else
     //     cout << "even" << endl;
 
-    // ************ (2) set bit
+    // ************ (2) bit set or not ?
     // int num, bit;
     // cin >> num >> bit;
     // cout << "check that bit " << bit << " is set or not ?" << endl;
@@ -62,8 +61,7 @@ int main()
     // num = num & num - 1;
     // cout << "after num : " << num;
 
-    // ******** 5
-    //  // check wheather number is power of 2 or not
+    // ******** 5 check wheather number is power of 2 or not
     // int n;
     // cout << "check num is power of 2 or not :  ";
     // cin >> n;
@@ -114,7 +112,7 @@ int main()
 
     // ********** NOT **********
     // int num = 16;
-    // num = ~num;
+    // num = ~num; // (-1*num - 1)
     // cout << "the number is " << num << endl;
 
     // ********** XOR **********

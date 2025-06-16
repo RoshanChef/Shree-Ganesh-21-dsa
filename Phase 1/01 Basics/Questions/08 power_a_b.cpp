@@ -4,9 +4,10 @@ using namespace std;
 int power_a_b(int a, int b)
 {
     int ans = 1;
-    
+    int half = b >> 1;
+
     // O(b)
-    for (int i = 0; i < b >> 1; i++)
+    for (int i = 0; i < half; i++)
         ans *= a;
 
     return (b % 2) ? ans * ans * a : ans * ans;

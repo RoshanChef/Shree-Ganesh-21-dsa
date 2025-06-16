@@ -1,10 +1,18 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cmath>
 using namespace std;
+
+/*
+
+
+nim game
+
+*/
 
 int main()
 {
-    int cnt = 0; 
-
+    int ar[] = {2, 7, 4, 11, 5, 8};
+    
 
     return 0;
 }
