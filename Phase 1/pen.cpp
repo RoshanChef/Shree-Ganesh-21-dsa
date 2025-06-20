@@ -1,16 +1,21 @@
 #include <iostream>
 using namespace std;
 
-void rotate(int ar[], int len)
+void insertion(int ar[], int len)
 {
-    int temp = ar[len - 1];
-    int i = len - 2;
-    while (i >= 0)
+
+    for (int i = 1; i < len; i++)
     {
-        ar[i + 1] = ar[i];
-        i--;
+        int j = i;
+        while (j > 0)
+        {
+            if (ar[j] < ar[j - 1])
+                swap(ar[j], ar[j - 1]);
+            else
+                break;
+            j--;
+        }
     }
-    ar[0] = temp;
 }
 
 int main()
@@ -18,7 +23,9 @@ int main()
     int ar[] = {2, 7, 8, 4, 11, 5};
     int len = sizeof(ar) / sizeof(int);
 
-    rotate(ar, len);
+    insertion(ar, len);
+
+    cout << "Printing element " << endl;
     for (int i = 0; i < len; i++)
         cout << ar[i] << " ";
 
