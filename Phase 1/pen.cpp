@@ -1,33 +1,56 @@
 #include <iostream>
 using namespace std;
 
-void insertion(int ar[], int len)
+int binary_search(int ar[], int len, int ele)
 {
-
-    for (int i = 1; i < len; i++)
+    int start = 0;
+    int end = len - 1;
+    while (start <= end)
     {
-        int j = i;
-        while (j > 0)
-        {
-            if (ar[j] < ar[j - 1])
-                swap(ar[j], ar[j - 1]);
-            else
-                break;
-            j--;
-        }
+        int mid = end + (start - end) / 2;
+
+        if (ar[mid] == ele)
+            return mid;
+        else if (ele > mid)
+            start = mid + 1;
+        else
+            end = mid - 1;
     }
+    return -1;
+}
+
+int binary_search_des(int ar[], int len, int ele)
+{
+    int start = 0, end = len - 1;
+    while (start <= end)
+    {
+        int mid = end + (start - end) / 2;
+
+        if (ar[mid] == ele)
+            return mid;
+        else if (ar[mid] < ele)
+            end = mid - 1;
+        else
+            start = mid + 1;
+    }
+    return -1;
 }
 
 int main()
 {
-    int ar[] = {2, 7, 8, 4, 11, 5};
+    // int ar[] = {20, 40, 70, 80, 110};
+    int ar[] = {110, 80, 70, 40, 20};
     int len = sizeof(ar) / sizeof(int);
-
-    insertion(ar, len);
 
     cout << "Printing element " << endl;
     for (int i = 0; i < len; i++)
         cout << ar[i] << " ";
+
+    cout << endl;
+
+    int ele = 20;
+    int inx = binary_search_des(ar, len, ele);
+    cout << "ele found at " << inx << endl;
 
     return 0;
 }

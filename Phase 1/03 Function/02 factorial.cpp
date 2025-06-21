@@ -23,7 +23,7 @@ int n_c_r(int n, int r)
 }
 
 // declaration
-// void print_count(int );
+// void print_count(int);
 void print_count(int n);
 
 int main()
