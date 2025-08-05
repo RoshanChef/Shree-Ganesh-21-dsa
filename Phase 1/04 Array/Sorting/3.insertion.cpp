@@ -37,7 +37,20 @@ void insertion_des(int ar[], int len)
 
 void insertion_last(int ar[], int len)
 {
-    // pending ...
+    int i = len - 1;
+    while (i >= 0)
+    {
+        int j = i;
+        while (j < len - 1)
+        {
+            if (ar[j] > ar[j + 1])
+                swap(ar[j], ar[j + 1]);
+            else
+                break;
+            j++;
+        }
+        i--;
+    }
 }
 /*
   Time : O(N*N)
