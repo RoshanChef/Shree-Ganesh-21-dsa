@@ -3,15 +3,8 @@ using namespace std;
 int main()
 {
 
-  int int_val = 23;
-  unsigned int unsigned_val = 2343;
-  signed int signed_val = -234;
-  long int l_int = 2342432;
-
-  cout << "int size " << sizeof(int_val) << endl;
-  cout << "unsign size " << sizeof(unsigned_val) << endl;
-  cout << "sign size " << sizeof(signed_val) << endl;
-  cout << "long int size " << sizeof(l_int) << endl;
+  // insertion operator (<<)
+  cout << "hello Roshan" << endl;
 
   cout << endl;
   cout << endl;
@@ -23,7 +16,7 @@ int main()
   cout << "integer value " << i << endl;
 
   // unsigned int u_i = -231;
-  unsigned u_i = 231; // unsigned int => unsigned
+  unsigned u_i = 231; // unsigned int => unsigned11
   // greater number
   cout << "unsigned value " << u_i << endl;
 
@@ -46,9 +39,8 @@ int main()
   cout << num1 << endl;
 
   // binary number
-  num1= 0b10011; 
-  cout<< num1 << endl;
-  
+  num1 = 0b10011;
+  cout << num1 << endl;
 
   float f = 2323.34f;
   cout << "float value " << f << endl;
@@ -83,6 +75,12 @@ int main()
 
   // fixed setPrecision
   cout << fixed << setprecision(4) << pi << endl;
+
+  /*
+  variable
+      A variable is a named container that reserves a space in memory to store
+      a value that can be changed during program execution.
+  */
 
   return 0;
 }

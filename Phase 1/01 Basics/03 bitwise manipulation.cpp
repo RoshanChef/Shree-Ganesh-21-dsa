@@ -2,7 +2,7 @@
 using namespace std;
 string check(int num, int bit)
 {
-    int check_bit =1 << bit - 1;
+    int check_bit = 1 << bit - 1;
 
     if (check_bit & num)
         return "bit is set";
@@ -112,7 +112,7 @@ int main()
 
     // ********** NOT **********
     // int num = 16;
-    // num = ~num; // (-1*num - 1)
+    // num = ~num; // (-1*num - 1) or  -(n+1)
     // cout << "the number is " << num << endl;
 
     // ********** XOR **********
@@ -123,7 +123,7 @@ int main()
     // int val = 0b10011;
     // cout << (1 ^ val) << endl;
 
-    // (2). unique from pair of numbers
+    // (2) unique from pair of numbers
     // int ar[] = {2, 1, 2, 5, 7, 5, 6, 7, 6, 1, 101};
     // int len = sizeof(ar) / sizeof(int);
 
