@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
 using namespace std;
 
 void print(vector<int> ar)
@@ -12,19 +14,15 @@ void print(vector<int> ar)
 
 int main()
 {
-    vector<vector<int>> v;
-    vector<int> a = {1, 2, 3, 4, 5};
-    vector<int> b = {10, 20, 30, 40, 50};
-    vector<int> c = {100, 200, 300, 400, 500};
+    vector<int> v = {50, 40, 30, 20, 10};
 
-    v.push_back(a);
-    v.push_back(b);
-    v.push_back(c);
+    cout << "Before : " << endl;
+    print(v);
 
-    for (vector<int> row : v)
-        print(row);
+    cout << endl;
 
-    cout << "size " << v.size() + v[0].size() << endl;
+    sort(v.begin(), v.end());
 
-    return 0;
+    cout << "After : " << endl;
+    print(v);
 }
