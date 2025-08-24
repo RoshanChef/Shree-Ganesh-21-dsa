@@ -2,7 +2,8 @@
 #include <cmath>
 using namespace std;
 
-int main() {
+int main()
+{
     double x = 25.0, y = 3.0, angle = 45.0;
 
     // Square root
@@ -24,7 +25,7 @@ int main() {
     cout << "round(4.5) = " << round(4.5) << endl;
 
     // Trigonometric functions (convert degrees to radians)
-    double radians = angle * M_PI / 180.0; 
+    double radians = angle * M_PI / 180.0;
     cout << "sin(45 degrees) = " << sin(radians) << endl;
     cout << "cos(45 degrees) = " << cos(radians) << endl;
     cout << "tan(45 degrees) = " << tan(radians) << endl;

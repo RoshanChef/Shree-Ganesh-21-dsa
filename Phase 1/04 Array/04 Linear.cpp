@@ -17,6 +17,7 @@ int main()
     int ar[] = {1, 2, 7, 9, 11};
     int element;
     cin >> element;
+    
     int len = sizeof(ar) / sizeof(int);
     cout << len << endl;
 

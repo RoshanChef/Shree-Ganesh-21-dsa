@@ -1,52 +1,103 @@
 #include <iostream>
 using namespace std;
 
-struct node
-{
-    string str;
-    int num;
-    double dub;
-    void great()
-    {
-        cout << "Hello Roshan" << endl;
-    }
-    node()
-    {
-        str = "";
-        num = 0;
-        dub = 0.0; // initialize with 0.0 to avoid garbage values
+/*
+    // Structure Declaration
+    struct name {
+        type1 mem1;
+        type2 mem2;
+        ...
     };
-    node(string _str, int _num, double _dub)
+
+    // Structure Declaration + Definition
+    struct name {
+        type1 mem1;
+        type2 mem2;
+        ...
+    } var1, var2;
+
+    // ❌ This fails in older C++ versions (initialization inside struct)
+    struct Point {
+        int x = 0;
+        int y = 0;
+    };
+
+    // Access and Modify Members
+    var_name.member_name;
+    var_name.member_name = new_val;
+
+    // Member Functions
+    struct Point {
+        int x, y;
+
+        // Member function
+        int sum() {
+            return x + y;
+        }
+    };
+
+    // Call member function using (.) operator
+    cout << s.sum();
+
+    // Nested Structure
+    struct Inner {
+        int a, b;
+    };
+
+    struct Outer {
+        Inner in;
+        int x, y;
+    };
+
+    ---- OR ----
+    struct Outer {
+        struct Inner {
+            int a, b;
+        } in;
+
+        void hello() { cout << "Hello, World!" << endl; }
+        int sum(int a, int b) { return a + b; }
+    };
+*/
+
+// Structure with functions
+struct name
+{
+    int x, y;
+
+    void hello() { cout << "Namaste Roshan" << endl; }
+
+    int sum(int a, int b) { return a + b; }
+};
+
+struct outer
+{
+    struct inner
     {
-        str = _str;
-        num = _num;
-        dub = _dub;
-    }
+        int x, y;
+    } in;
+    int ok;
+    void hello() { cout << "Hello World !!" << endl; }
+    int mul(int a, int b) { return a * b; }
 };
 
 int main()
 {
+    name var;
 
-    node temp;
-    cout << temp.num << endl;
-    cout << temp.str << endl;
-    cout << temp.dub << endl;   
+    var.x = 100;
+    var.y = 200;
 
+    cout << "x = " << var.x << endl;
+    cout << "y = " << var.y << endl;
 
-    cout << "another node " << endl
-         << endl;
-    node second("Roshan", 10, 12.42);
-    cout << second.num << endl;
-    cout << second.str << endl;
-    cout << second.dub << endl;
+    var.hello();
+    cout << "Sum(10, 20) = " << var.sum(10, 20) << endl;
 
-
-    // using new keyword
-    node *third = new node("Krishna", 22, 423.324);
-    cout << (*third).str << endl;
-    cout << third->str << endl;
-    cout << third->num << endl;
-    cout << third->dub << endl;
+    // nested
+    outer out = {{12, 22}, 30};
+    out.hello();
+    cout << "Multiplication = " << out.mul(10, 20) << endl;
 
     return 0;
 }

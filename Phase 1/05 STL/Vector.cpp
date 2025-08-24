@@ -86,7 +86,12 @@ int main()
 
     // 2d of 10*20
     vector<vector<int>> walk(10, vector<int>(20, 0));
-    cout << "2d size " << walk.size() << endl;
+
+    // Number of  rows
+    cout << "Rows = " << walk.size() << endl;
+
+    // Number of columns
+    cout << "Columns in row 0 = " << walk[0].size() << endl;
 
     // using array
     vector<int> arr[4];

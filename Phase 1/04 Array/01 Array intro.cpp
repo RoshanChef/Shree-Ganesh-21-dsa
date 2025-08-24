@@ -16,6 +16,7 @@ int main()
 
     // accessing the val at 12
     // cout << number[12] << endl;
+
     // garbage value
     // cout << number[20] << endl;
 
@@ -24,7 +25,7 @@ int main()
     // int len = sizeof(first) / sizeof(int);
     // cout << len << endl;
 
-    //  ar initialization all by 0
+    // ar initialization all by 0
     // int ar[100] = {};
     // int ar[20];
     // ar[10] = 12;
@@ -40,15 +41,19 @@ int main()
     // int len = sizeof(arr) / sizeof(int);
 
     /*
+
         int arr[5] = {10 , 20, 30 , 40 , 50};
 
-        address(arr) = base + { index - baseIndex * size of data type }
+        address(arr) = base + { index - baseIndex } * size of data type
         baseIndex = here is 0. it can be anything
+
     */
 
     char ch[4] = {'a', 'b', 'c', 'd'};
+
     for (int i = 0; i < 4; i++)
         cout << ch[i] << " ";
+
     cout << "Printing done .. " << endl;
 
     return 0;
