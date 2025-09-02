@@ -15,5 +15,12 @@ int main()
     cout << "size of stack" << s.size() << endl;
     cout << "is empty  " << s.empty() << endl;
 
+    // swap
+    stack<int> s2;
+    s2.push(100);
+
+    cout << "After swap, top of s: " << s.top() << endl;
+    cout << "After swap, top of s2: " << s2.top() << endl;
+
     return 0;
 }

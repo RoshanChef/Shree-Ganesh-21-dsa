@@ -1,29 +1,34 @@
 #include <iostream>
 using namespace std;
 
-int mySqrt(int x)
+int floorSqrt(int n)
 {
-    if (x < 2)
-        return x;
+    if (n < 4)
+        return 1;
 
-    int start = 1, end = x;
+    int s = 2, e = n;
     int ans = 0;
 
-    while (start <= end)
+    while (s <= e)
     {
-        int mid = start + (end - start) / 2;
+        int mid = s + (e - s) / 2;
 
-        int div = x / mid;
-        if (mid == div)
+        int div = n / mid;
+        /*
+            n = mid*mid
+            n/mid = mid
+        */
+        if (div == mid)
             return mid;
-        else if (mid > div)
-            end = mid - 1;
-        else
+        else if (mid < div)
         {
             ans = mid;
-            start = mid + 1;
+            s = mid + 1;
         }
+        else
+            e = mid - 1;
     }
+
     return ans;
 }
 
@@ -31,7 +36,7 @@ int main()
 {
 
     int num = 16;
-    cout << "sqrt of " << num << " : " << mySqrt(num) << endl;
+    cout << "sqrt of " << num << " : " << floorSqrt(num) << endl;
 
     return 0;
 }

@@ -52,6 +52,25 @@ void insertion_last(int ar[], int len)
         i--;
     }
 }
+
+// swap based
+void insertionSort(int ar[] , int n)
+{
+    for (int i = 1; i < n; i++)
+    {
+        int temp = ar[i];
+        int j = i - 1;
+
+        // shift instead of swapping repeatedly
+        while (j >= 0 && ar[j] > temp)
+        {
+            ar[j + 1] = ar[j];
+            j--;
+        }
+        ar[j + 1] = temp;
+    }
+}
+
 /*
   Time : O(N*N)
   Space : O(N)

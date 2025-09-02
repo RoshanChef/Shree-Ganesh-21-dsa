@@ -8,11 +8,11 @@ int main()
 {
     int arr[] = {2, 1, 2, 3, 3, 4, 4, 4, 5};
     set<int> st;
-    for (auto ele : arr)
+    for (int ele : arr)
         st.insert(ele); // O(logn)
 
     cout << "Before : " << endl;
-    for (auto ele : st)
+    for (int ele : st)
         cout << ele << " ";
 
     // remove the 1st element

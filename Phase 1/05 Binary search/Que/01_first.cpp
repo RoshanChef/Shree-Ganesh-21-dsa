@@ -46,6 +46,35 @@ void first_occur(vector<int> &ar, int len, int ele, vector<int> &ans)
     ans.push_back(res);
 }
 
+// Generic function to find occurrence (first or last)
+int find_occurrence(const vector<int> &ar, int ele, bool findFirst)
+{
+    int start = 0, end = (int)ar.size() - 1, res = -1;
+
+    while (start <= end)
+    {
+        int mid = start + (end - start) / 2;
+
+        if (ar[mid] == ele)
+        {
+            res = mid;
+            if (findFirst)
+                end = mid - 1; // keep searching left
+            else
+                start = mid + 1; // keep searching right
+        }
+        else if (ar[mid] < ele)
+        {
+            start = mid + 1;
+        }
+        else
+        {
+            end = mid - 1;
+        }
+    }
+    return res;
+}
+
 vector<int> first_and_last(vector<int> &ar, int ele)
 {
 

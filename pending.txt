@@ -1,1 +1,3 @@
-not understood
+Optimal Array
+https://www.geeksforgeeks.org/problems/optimal-array--170647/1
+

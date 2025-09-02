@@ -1,28 +1,31 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-
 using namespace std;
 
-void print(vector<int> ar)
+int min_ele(vector<int> ar)
 {
+    int mini = 0;
+    int s = 0, e = ar.size() - 1;
 
-    for (int val : ar)
-        cout << val << " ";
-    cout << endl;
+    if (ar[0] < ar[e])
+        return ar[0];
+
+    while (s < e)
+    {
+        int mid = s + (e - s) / 2;
+        if (ar[0] <= ar[mid])
+            s = mid + 1;
+        else
+        {
+            e = mid;
+            mini = ar[mid];
+        }
+    }
+    return mini;
 }
 
 int main()
 {
-    vector<int> v = {50, 40, 30, 20, 10};
-
-    cout << "Before : " << endl;
-    print(v);
-
-    cout << endl;
-
-    sort(v.begin(), v.end());
-
-    cout << "After : " << endl;
-    print(v);
+    vector<int> ar = {3, 3,3, 3, 3};
+    cout << min_ele(ar) << endl;
 }

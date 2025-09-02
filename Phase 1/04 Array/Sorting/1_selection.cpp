@@ -37,7 +37,7 @@ void selection_des(int ar[], int len)
 /*
   Time : O(N*N)
   Space : O(1)
-  stable : Not stable
+  stable : Not stable   eg (4,a)  (2,x)  (4,b)  (3,y)
 */
 
 void stable_selection(int ar[], int len)

@@ -57,6 +57,11 @@ void bubble_last(int ar[], int len)
     }
 }
 
+/*
+time : O(N*N)
+space : O(1)
+stable : yes
+*/
 int main()
 {
     int ar[5] = {7, 4, 2, 3, 5};
