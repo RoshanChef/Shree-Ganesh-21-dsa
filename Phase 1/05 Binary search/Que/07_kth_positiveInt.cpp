@@ -24,6 +24,36 @@ int kth_missin_pos(int ar[], int k, int len)
     return ans;
 }
 
+/*
+
+    if array sort like {1, 2, 3, 4, 5 }
+        here ar[i] = i+1;
+             ar[i]-1 = i;
+
+        0  1  2  3  4   5
+       {2, 3, 4, 7, 11, 12}
+
+        1  1  1  3   6   6
+
+        3-6
+            10 => 11 - 1 = 6th (diff-6+1)
+            9  => 11 - 2 = 5th (diff-5+1)
+            8  => 11 - 3 = 4th (diff-4+1)
+       
+        here the target is to find inx(index >= k)
+        ans = index + k;
+
+    why ?
+
+    kth no = ar[inx] - x;
+            = ar[inx] - {diff - k +1}
+            = ar[inx] - { (ar[inx] - {inx+1}) - k +1}
+            = ar[inx] - { (ar[inx] - inx - 1 - k +1}
+            = ar[inx] - ar[inx] + inx + k
+            = inx + k
+
+*/
+
 // binary search O(log N)
 int kth_mis_pos(int ar[], int k, int len)
 {

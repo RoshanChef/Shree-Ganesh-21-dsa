@@ -9,16 +9,59 @@ You are given an array arr[] of integers, where each element arr[i] represents t
 - Each student receives atleast one book.
 - Each student is assigned a contiguous sequence of books.
 - No book is assigned to more than one student.
+- All books must be allocated
 
 The objective is to minimize the maximum number of pages assigned to any student. In other words, out of all possible allocations, find the arrangement where the student who receives the most pages still has the smallest possible maximum.
 
 Note: Return -1 if a valid assignment is not possible, and allotment should be in contiguous order (see the explanation for better understanding).
 
-inshort : 
+inshort :
+    min(max)
 
  you are trying to assign equal page's book to every std but pages may diff you are trying to assign such that the diff bw the allocation will be mini so that load is balnaced.
 
 */
+// Brute force
+int findPages(std::vector<int> &ar, int k)
+{
+    if (k > ar.size())
+    {
+        return -1;
+    }
+
+    int maxi = 0;
+    int sumi = 0;
+
+    for (int val : ar)
+    {
+        maxi = max(maxi, val);
+        sumi += val;
+    }
+
+    for (int i = maxi; i <= sumi; ++i)
+    {
+        int count = 1;
+        int cur = 0, page_sum = 0;
+
+        for (int pages : ar)
+        {
+            page_sum += pages;
+            if (page_sum > i)
+            {
+                count++;
+                page_sum = pages;
+            }
+        }
+
+        if (count <= k)
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+// binary search
 int findPages(vector<int> &ar, int k)
 {
 
@@ -29,6 +72,7 @@ int findPages(vector<int> &ar, int k)
 
     int st = INT32_MIN, end = 0;
 
+    // find maximum for start and end will be sum of all
     for (int val : ar)
     {
         if (val > st)
@@ -42,13 +86,13 @@ int findPages(vector<int> &ar, int k)
         int mid = st + (end - st) / 2;
         int count = 1, page_sum = 0;
 
-        for (int i = 0; i < len; i++)
+        for (int pages : ar)
         {
-            page_sum += ar[i];
+            page_sum += pages;
             if (page_sum > mid)
             {
                 count++;
-                page_sum = ar[i];
+                page_sum = pages;
             }
         }
 
