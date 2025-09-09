@@ -99,7 +99,7 @@ int main()
     // 1d
     vector<int> _v(7, 12);
 
-    // 2D vector: 10
+    // 2D vector: 10x5
     vector<vector<int>> _v1(10, vector<int>(5));
 
     // 3D vector: 15x20x5
