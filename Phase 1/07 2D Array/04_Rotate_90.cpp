@@ -2,14 +2,22 @@
 using namespace std;
 
 // time : O(n*n) space O(n*n)
-void Rotate_90(vector<vector<int>> &ar, vector<vector<int>> &res)
+void Rotate_90(vector<vector<int>> &matrix)
 {
-    int row = ar.size();
-    int col = ar[0].size();
+    int n = matrix.size();
+    vector<vector<int>> temp(n, vector<int>(n));
 
-    for (int i = 0; i < row; i++)
-        for (int j = 0; j < col; j++)
-            res[j][row - i - 1] = ar[i][j];
+    // Directly place elements into rotated position
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            temp[n - j - 1][i] = matrix[i][j];
+        }
+    }
+
+    // Copy back into original matrix
+    matrix = temp;
 }
 
 // time : O(n*n) space : O(1)
@@ -62,10 +70,6 @@ int main()
                               {5, 6, 7, 8},
                               {9, 10, 11, 12},
                               {13, 14, 15, 16}};
-
-    int row = ar.size(), col = ar[0].size();
-
-    vector<vector<int>> res(row, vector<int>(col));
 
     pr_row(ar);
     // Rotate_90(ar, res);
