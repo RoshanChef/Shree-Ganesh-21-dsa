@@ -6,7 +6,7 @@ void rotateMatrix(vector<vector<int>> &mat)
 {
 
     int n = mat.size();
-
+    
     for (int i = 0; i < n / 2; i++)
         for (int j = 0; j < n; j++)
             swap(mat[i][j], mat[n - 1 - i][n - 1 - j]);
@@ -19,6 +19,13 @@ void rotateMatrix(vector<vector<int>> &mat)
         while (s < e)
             swap(mat[row][e--], mat[row][s++]);
     }
+}
+
+void rotate_180(vector<vector<int>> &ar){
+    // row-wise reverse 
+
+    // column-wise reverse
+
 }
 
 // Print in row major

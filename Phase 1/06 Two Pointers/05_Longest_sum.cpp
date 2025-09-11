@@ -30,7 +30,7 @@ int maxSubarraySum(vector<int> &ar)
     return maxi;
 }
 
-// O(N)
+// O(N) Kadane's Algorithm
 int maxiSubArraySum(vector<int> &ar)
 {
     int sum = 0;

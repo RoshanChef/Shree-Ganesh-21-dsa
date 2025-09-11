@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /*
-Given an array, arr[] and an integer x, return true if there exists a pair of elements in the array whose absolute difference is x, otherwise, return false.
+Given an array, arr[] and an integer target, return true if there exists a pair of elements in the array whose absolute difference is x, otherwise, return false.
 */
 
 // O(nlogn)

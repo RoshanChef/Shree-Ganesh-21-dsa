@@ -20,7 +20,7 @@ void Rotate_90(vector<vector<int>> &matrix)
     matrix = temp;
 }
 
-// time : O(n*n) space : O(1)
+// time : O(n*n) space : O(1) clockwise
 void rotate(vector<vector<int>> &matrix)
 {
     int row = matrix.size();
@@ -45,6 +45,31 @@ void rotate(vector<vector<int>> &matrix)
             swap(matrix[j][i], matrix[j][col]);
         }
         i++, col--;
+    }
+}
+
+// time : O(n*n) space : O(1) anti-clockwise
+void rotate_anti(vector<vector<int>> &matrix)
+{
+    int row = matrix.size();
+    int col = matrix[0].size();
+
+    // Transpose
+    for (int i = 0; i < row - 1; i++)
+    {
+        for (int j = i + 1; j < col; j++)
+        {
+            swap(matrix[i][j], matrix[j][i]);
+        }
+    }
+
+    // Reverse in row wise
+    int s = 0, e = row - 1;
+    while (s < e)
+    {
+        for (int i = 0; i < col; i++)
+            swap(matrix[s][i], matrix[e][i]);
+        s++, e--;
     }
 }
 
