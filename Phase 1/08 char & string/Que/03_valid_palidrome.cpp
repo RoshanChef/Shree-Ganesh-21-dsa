@@ -4,14 +4,17 @@ using namespace std;
 /*
     Given a string s, return true if the s can be palindrome after deleting at most one character from it.
 
-    Input: ["23:50","23:55","00:00","00:05","12:00"]
-    Output: 5
+    Input: s = "abca"
+    Output: true
 
-    Input: ["05:00","05:10","05:20","05:25","06:00","06:40","07:15"]
-    Output: 5
+    Input: s = "aba"
+    Output: true
 
-    Input: ["01:00","03:15","04:45","07:30","12:00","15:20","18:10","21:55","23:50"]
-    Output: 15
+    Input: s = "deeee"
+    Output: true
+ 
+    Input: s = "cbbcc" 
+    Output: true
 */
 
 bool isvalid(string &s, int st, int e)

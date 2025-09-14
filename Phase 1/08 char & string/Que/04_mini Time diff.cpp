@@ -6,12 +6,20 @@ Given a list of 24-hour clock time points in "HH:MM" format, return the minimum 
 
 Example 1:
 
-Input: timePoints = ["23:59","00:00"]
-Output: 1
-Example 2:
+    Input: timePoints = ["23:59","00:00"]
+    Output: 1
 
-Input: timePoints = ["00:00","23:59","00:00"]
-Output: 0
+    Input: timePoints = ["00:00","23:59","00:00"]
+    Output: 0
+
+    Input: ["23:50","23:55","00:00","00:05","12:00"]
+    Output: 5
+
+    Input: ["05:00","05:10","05:20","05:25","06:00","06:40","07:15"]
+    Output: 5
+
+    Input: ["01:00","03:15","04:45","07:30","12:00","15:20","18:10","21:55","23:50"]
+    Output: 15
 
 */
 
@@ -40,7 +48,9 @@ int findMinDifference(vector<string> &timePoints)
     }
 
     // Handle circular time difference (crossing midnight)
-    int circularDiff = (1440 + ans[0] - ans[len - 1]) % 1440;
+    // last = 1440 - ar[last] + ar[first]
+    // why ? => we need forward circle of clock
+    int circularDiff = (1440 - ans[len - 1] + ans[0]) % 1440;
     mini = min(mini, circularDiff);
 
     return mini;
