@@ -28,7 +28,7 @@ int aggresive(vector<int> ar, int k)
 
         while (j < n && temp > 1)
         {
-            if (ar[j] >= dis + cur)
+            if (ar[j] - cur >= dis)
             {
                 cnt++;
                 cur = ar[j];
@@ -66,7 +66,7 @@ int aggressiveCows(vector<int> ar, int k)
 
         while (j < n && temp > 1)
         {
-            if (ar[j] >= dis + cur)
+            if (ar[j] - cur>= dis)
             {
                 cnt++;
                 cur = ar[j];

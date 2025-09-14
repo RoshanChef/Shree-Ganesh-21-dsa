@@ -3,29 +3,48 @@
 using namespace std;
 
 // find function in cpp
-int finddi(string hay, string needle)
+int finddi(const string &hay, const string &needle)
 {
-    int l1 = hay.length();
-    int l2 = needle.length();
+    int n = hay.size();
+    int m = needle.size();
 
-    for (int i = 0; i <= l1 - l2; i++)
+    if (m == 0)
+        return 0; // empty needle found at index 0
+    if (m > n)
+        return -1; // needle longer than haystack → not found
+
+    for (int i = 0; i <= n - m; i++)
     {
-        bool flag = true;
-        for (int j = 0; j < l2; j++)
-        {
-            if (hay[i + j] != needle[j])
-            {
-                flag = false;
-                break;
-            }
-        }
+        int j = 0;
+        while (j < m && hay[i + j] == needle[j])
+            j++;
 
-        if (flag)
-        {
-            return i;
-        }
+        if (j == m)
+            return i; // found full match
     }
-    return -1;
+    return -1; // not found
+}
+
+
+// erase function in cpp
+void erasee(string &s, int inx, int len)
+{
+    int n = s.size();
+
+    // invalid index
+    if (inx < 0 || inx >= n)
+        return;
+    if (len < 0 || inx + len > n)
+        len = n - inx;
+
+    int j = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (inx <= i && i < inx + len)
+            continue;
+        s[j++] = s[i];
+    }
+    s.resize(j);
 }
 
 int main()
