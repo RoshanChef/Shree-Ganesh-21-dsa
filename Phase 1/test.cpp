@@ -1,19 +1,10 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
-    string s = "abc";
-    int n = s.size();
+    int n, m;
+    cout << "Enter the n and m " << endl;
 
-    for (int i = 0; i < n; i++)
-    {
-        string ans = "";
-        for (int j = i; j < n; j++)
-        {
-            ans += s[j];
-            cout << ans << " ";
-        }
-        cout << endl;
-    }
 }
