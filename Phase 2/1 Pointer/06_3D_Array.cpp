@@ -1,51 +1,46 @@
 #include <iostream>
 using namespace std;
-
+    
 int main() {
-    // size of 3D array
-    int n;
-    cout << "Enter size (n): ";
-    cin >> n;
+    
+    int L,B,H; 
+    cout<<"Enter the L,B,H "<<endl; 
+    cin>>L>>B>>H; 
+    cout<<endl; 
+    
+    int ***p = new int**[L]; 
+    
+    for(int i = 0; i<L; i++){
+        p[i] = new int*[B]; 
 
-    // allocate 3D array dynamically
-    int ***ar = new int**[n];
-    for (int i = 0; i < n; i++) {
-        ar[i] = new int*[n];
-        for (int j = 0; j < n; j++) {
-            ar[i][j] = new int[n];
+        for(int j=0; j<B; j++){
+            p[i][j] = new int[H]; 
         }
+        
     }
-
-    // input values
-    cout << "Enter " << n * n * n << " elements:\n";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            for (int k = 0; k < n; k++) {
-                cin >> ar[i][j][k];
-            }
+    
+    int cnt = 1; 
+    // Assising the value
+    for(int i=0; i<L; i++)
+        for(int j=0; j<B; j++)
+            for(int k=0; k<H; k++)
+                p[i][j][k] = cnt++;
+    
+    // Printing array
+    for(int i=0; i<L; i++)
+        for(int j=0; j<B; j++)
+            for(int k=0; k<H; k++)
+                cout<<p[i][j][k]<<" ";
+                
+    // Releasing the memory
+    for(int i =0; i<L; i++){
+        for(int j =0; j<B; j++){
+            delete[] p[i][j];
         }
+        delete[] p[i]; 
     }
-
-    // output values
-    cout << "\n3D Array elements:\n";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            for (int k = 0; k < n; k++) {
-                cout << ar[i][j][k] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-    }
-
-    // free memory
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            delete[] ar[i][j];
-        }
-        delete[] ar[i];
-    }
-    delete[] ar;
+    
+    delete[] p; 
 
     return 0;
 }
