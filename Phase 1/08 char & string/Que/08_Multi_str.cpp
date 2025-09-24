@@ -1,6 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Solution
@@ -110,7 +108,7 @@ class Solution
     }
 
 public:
-    // time : O(a,b)
+    // time : O(a*b)
     string multiply(string a, string b)
     {
         if (a == "0" || b == "0")
@@ -125,6 +123,50 @@ public:
         return ans;
     }
 };
+
+// time O(a*b) space O(a+b)
+string multiply(string a, string b)
+{
+    if (a[0] == '0' || b[0] == '0')
+        return "0";
+
+    int an = a.size();
+    int bn = b.size();
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+
+    vector<int> res(an + bn);
+
+    for (int i = 0; i < bn; i++)
+    {
+        int st = i;
+        int cr = 0;
+
+        for (int j = 0; j < an; j++)
+        {
+            int sum = (a[j] - '0') * (b[i] - '0') + res[st] + cr;
+            int rem = sum % 10;
+            res[st++] = rem;
+            cr = sum / 10;
+        }
+        if (cr)
+            res[st] = cr;
+    }
+
+    int i = an + bn - 1;
+    if (res[an + bn - 1] == 0)
+        i--;
+
+    string answer;
+
+    while (i >= 0)
+    {
+        answer += res[i] + '0';
+        i--;
+    }
+
+    return answer;
+}
 
 int main()
 {
