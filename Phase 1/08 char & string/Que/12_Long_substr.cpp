@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main()
+// time : O(N*N*N), space : O(1)
+int lengthOfLongestSubstring(string s)
 {
-    string s = "ababc";
     int n = s.size();
 
     int max_len = 0;
@@ -17,8 +17,6 @@ int main()
             for (int sub_str = row; sub_str <= inside; sub_str++)
             {
                 char cur = s[sub_str];
-                cout << cur;
-
                 seen[cur]++;
                 if (seen[cur] > 1)
                 {
@@ -28,11 +26,16 @@ int main()
                 len++;
             }
             max_len = max(len, max_len);
-            cout << " ";
         }
-
-        cout << endl;
     }
-    cout << max_len;
+
+    return max_len;
+}
+
+int main()
+{
+    string s = "ABABC";
+    cout << "Length of longest substring without repeating characters: "
+         << lengthOfLongestSubstring(s) << endl;
     return 0;
 }

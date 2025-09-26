@@ -34,10 +34,9 @@ string add_str(string &a, string &b)
     }
 
     // add remaining carry
-    while (cr > 0)
+    if(cr > 0)
     {
-        ans += cr % 10 + '0';
-        cr = cr / 10;
+        ans += cr;
     }
 
     // reverse ans
