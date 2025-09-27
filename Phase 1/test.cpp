@@ -3,36 +3,24 @@ using namespace std;
 
 int main()
 {
-    string s = "ababc";
+    string s = "aabcbcdbca";
     int n = s.size();
 
-    int max_len = 0;
-    for (int row = 0; row < n; row++)
+    bool ar[26] = {};
+
+    int len = 0;
+    for (int i = 0; i < n; i++)
     {
-        for (int inside = row; inside < n; inside++)
-        {
-            int len = 0;
-            int seen[128] = {};
-
-            for (int sub_str = row; sub_str <= inside; sub_str++)
-            {
-                char cur = s[sub_str];
-                cout << cur;
-
-                seen[cur]++;
-                if (seen[cur] > 1)
-                {
-                    len = 0;
-                    break;
-                }
-                len++;
-            }
-            max_len = max(len, max_len);
-            cout << " ";
-        }
-
-        cout << endl;
+        if (ar[s[i] - 'a'] == 0)
+            len++;
+        ar[s[i] - 'a'] = 1;
     }
-    cout << max_len;
+
+    bool check[26] = {};
+    for (int i = 6; i < n; i++)
+    {
+        check[s[i] - 'a']++;
+    }
+
     return 0;
 }

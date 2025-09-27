@@ -39,7 +39,7 @@ int countSubstrings(string s)
     int center = 0, cnt = 0, n = s.size();
 
     // odd
-    while (center < n)   
+    while (center < n)
     {
         int k = center, j = center;
         while (k >= 0 && j < n)

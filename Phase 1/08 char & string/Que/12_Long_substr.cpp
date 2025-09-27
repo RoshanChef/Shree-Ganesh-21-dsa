@@ -32,6 +32,64 @@ int lengthOfLongestSubstring(string s)
     return max_len;
 }
 
+// time O(N*N)
+int lengthOfLongestSubstring2(string s)
+{
+    int n = s.size();
+    int mx_l = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        int len = 0;
+        int ar[128] = {};
+
+        for (int j = i; j < n; j++)
+        {
+            char cur = s[j];
+
+            if (ar[cur])
+                break;
+
+            ar[cur]++;
+            len++;
+            mx_l = max(mx_l, len);
+        }
+    }
+    return mx_l;
+}
+
+// time O(N)
+int lengthOfLongestSubstring3(string s)
+{
+    int n = s.size();
+    int mx_l = 0, len = 0;
+
+    int ar[128] = {};
+
+    int j = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        char cur = s[i];
+
+        if (ar[cur])
+        {
+            while (j < i)
+            {
+                len--;
+                ar[s[j]]--;
+                if (s[j++] == s[i])
+                    break;
+            }
+        }
+
+        ar[cur]++;
+        len++;
+        mx_l = max(mx_l, len);
+    }
+    return mx_l;
+}
+
 int main()
 {
     string s = "ABABC";
