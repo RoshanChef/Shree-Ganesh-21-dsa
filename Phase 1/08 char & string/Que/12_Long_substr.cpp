@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
+/*
+Given a string s, find the length of the longest substring without duplicate characters.
+*/
 
 // time : O(N*N*N), space : O(1)
 int lengthOfLongestSubstring(string s)
@@ -58,7 +61,7 @@ int lengthOfLongestSubstring2(string s)
     return mx_l;
 }
 
-// time O(N)
+// time O(N) sliding window
 int lengthOfLongestSubstring3(string s)
 {
     int n = s.size();
