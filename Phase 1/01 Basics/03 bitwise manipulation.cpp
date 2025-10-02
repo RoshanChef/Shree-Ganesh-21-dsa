@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 string check(int num, int bit)
 {
@@ -171,6 +171,16 @@ int main()
     // cin >> l >> r;
     // ans = xor_n(l - 1) ^ xor_n(r);
     // cout << "your answer is : " << ans;
+
+    /*
+        ceil value
+        -- ⌈fr/n⌉=(fr+n−1)/n
+    */
+    int n = 5, m = 3;
+    // int val = ceil((double)n / m);
+    int val = (n + m - 1) / m;
+
+    cout << "ceil value " << val << endl;
 
     return 0;
 }

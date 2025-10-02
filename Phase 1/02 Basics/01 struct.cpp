@@ -9,6 +9,7 @@ using namespace std;
         ...
     };
 
+    members are stored in contiguous memory 
     // Structure Declaration + Definition
     struct name {
         type1 mem1;
