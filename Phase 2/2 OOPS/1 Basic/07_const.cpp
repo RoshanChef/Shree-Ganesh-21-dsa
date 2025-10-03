@@ -16,7 +16,7 @@ public:
     void sety(int y) { this->y = y; }
 
     // getter
-    int getx() const { return x; } // can't modified the value of property inside
+    int getx() const { return x; } // inside this can't modified the value of property
     int gety() const { return y; }
 
     int getxx() const
@@ -58,6 +58,20 @@ public:
         cout << "Name " << this->name << endl;
         cout << "Marks " << this->marks << endl;
     }
+};
+
+// inlization list
+class customer
+{
+    const string name;
+    int *balance;
+
+public:
+    // error modifing the const
+    customer(string n , int bal){
+        // name = n;
+        balance = new int(bal);
+    }  
 };
 
 int main()
