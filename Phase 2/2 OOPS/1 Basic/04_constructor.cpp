@@ -38,7 +38,8 @@ public:
         width = 0;
     }
 
-    //constructor overloading 
+    // constructor overloading
+    // Constructor overloading means having multiple constructors in the same class, each with a different number or type of parameters.
 
     // cons with 1 parameter
     box(int length)
