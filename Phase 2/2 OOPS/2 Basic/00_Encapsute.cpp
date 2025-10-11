@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+    data hiding , means here we are wraping the data member and
+    member funx into class
+
+    so every class is eg of encapulation , but in strict encap we
+    are trying to make all the data member as private
+*/
+
 class customer
 {
     string name;
@@ -34,6 +42,14 @@ public:
         }
         else
             cout << "Balance is not sufficient" << endl;
+    }
+
+    void changeAge(int age)
+    {
+        if (0 < age && age <= 100)
+            this->age = age;
+        else
+            cout << "Invalid age" << endl;
     }
 
     void display()
