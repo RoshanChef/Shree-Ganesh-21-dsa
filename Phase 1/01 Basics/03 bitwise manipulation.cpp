@@ -180,6 +180,8 @@ int main()
     // int val = ceil((double)n / m);
     int val = (n + m - 1) / m;
 
+    // n / 2 + n % 2 ceil value
+
     cout << "ceil value " << val << endl;
 
     return 0;
