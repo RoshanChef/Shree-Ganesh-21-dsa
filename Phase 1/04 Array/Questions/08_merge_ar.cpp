@@ -63,6 +63,8 @@ void mergeArrays3(vector<int> &a, vector<int> &b)
 {
     int n = a.size();
     int m = b.size();
+
+    // celing value
     int gap = (n + m + 1) / 2;
 
     while (gap)
@@ -72,18 +74,23 @@ void mergeArrays3(vector<int> &a, vector<int> &b)
         {
             if (left < n)
             {
+                // ar1 ar1
                 if (right < n && a[left] > a[right])
                     swap(a[left], a[right]);
+                // ar1 ar2
                 else if (right >= n && a[left] > b[right - n])
                     swap(a[left], b[right - n]);
             }
             else
             {
+                // ar2 ar2
                 if (b[left - n] > b[right - n])
                     swap(b[left - n], b[right - n]);
             }
             left++, right++;
         }
+
+        // celing valuef
         gap = (gap > 1) ? (gap + 1) / 2 : 0;
     }
 }
