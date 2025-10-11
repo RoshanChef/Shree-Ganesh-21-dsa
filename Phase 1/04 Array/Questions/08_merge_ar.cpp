@@ -38,6 +38,7 @@ void mergeArrays(vector<int> &a, vector<int> &b)
     }
 }
 
+// time : (min(n,m) + nlogn + mlogm) , space : O(log n + log m)
 void mergeArrays2(vector<int> &a, vector<int> &b)
 {
     int n = a.size();
@@ -57,12 +58,49 @@ void mergeArrays2(vector<int> &a, vector<int> &b)
     sort(b.begin(), b.end());
 }
 
+// time : O((n + m) × log(n + m)) space O(1)
 void mergeArrays3(vector<int> &a, vector<int> &b)
 {
     int n = a.size();
     int m = b.size();
+    int gap = (n + m + 1) / 2;
+
+    while (gap)
+    {
+        int left = 0, right = gap;
+        while (right < m + n)
+        {
+            if (left < n)
+            {
+                if (right < n && a[left] > a[right])
+                    swap(a[left], a[right]);
+                else if (right >= n && a[left] > b[right - n])
+                    swap(a[left], b[right - n]);
+            }
+            else
+            {
+                if (b[left - n] > b[right - n])
+                    swap(b[left - n], b[right - n]);
+            }
+            left++, right++;
+        }
+        gap = (gap > 1) ? (gap + 1) / 2 : 0;
+    }
 }
 
 int main()
 {
+    vector<int> a = {2, 4, 7, 10}, b = {1, 2, 5, 9, 11};
+    mergeArrays3(a, b);
+
+    cout << "a values " << endl;
+    for (int val : a)
+        cout << val << " ";
+
+    cout << endl;
+
+    cout << "b values " << endl;
+    for (int val : b)
+        cout << val << " ";
+    cout << endl;
 }
