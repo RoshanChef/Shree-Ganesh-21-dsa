@@ -44,7 +44,7 @@ int gcd2(int a, int b)
 int main()
 {
 
-    cout << gcd1(6, 3) << endl;
+    cout << gcd2(1, 23) << endl;
 
     return 0;
 }
