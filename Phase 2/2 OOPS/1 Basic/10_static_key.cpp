@@ -56,7 +56,8 @@ public:
     {
         // cout << total_cus << endl;
 
-        // error : non static var
+         // no this pointer allowed
+        // error : non static var ,all member must be static
         // cout << name << endl;
 
         cout << "Hello world !!" << endl;

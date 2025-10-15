@@ -35,6 +35,23 @@ public:
     }
 };
 
+class test
+{
+private:
+    int fir, sec;
+
+public:
+    test()
+    {
+        this->fir = 0;
+        this->sec = 0;
+    }
+
+    test(int a, int b) : sec(a + b), fir(a) {};
+
+    friend int main();
+};
+
 int main()
 {
 
@@ -48,6 +65,10 @@ int main()
 
     customer *a4 = new customer;
     delete a4;
+
+    // test objett(10, 20);
+    // cout << objett.fir << endl;
+    // cout << objett.sec << endl;
 
     return 0;
 }
