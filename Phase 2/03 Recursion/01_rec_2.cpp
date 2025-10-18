@@ -45,6 +45,38 @@ int fib(int n)
     return fib(n - 1) + fib(n - 2);
 }
 
+// Palindrom
+bool palindrom(string &s, int en, int st = 0)
+{
+    if (st >= en)
+        return true;
+
+    return (s[st] == s[en]) && palindrom(s, en - 1, st + 1);
+}
+
+// count vowel 
+int cnt_vowel(string s, int i = 0)
+{
+    if (i == s.size())
+        return 0;
+
+    if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
+        return 1 + cnt_vowel(s, i + 1);
+
+    return cnt_vowel(s, i + 1);
+}
+
+// Reverse string
+string reverse_str(string &s, int en, int st = 0)
+{
+    if (st >= en)
+        return "";
+
+    swap(s[st], s[en]);
+    reverse_str(s, st + 1, en - 1);
+    return s;
+}
+
 int main()
 {
 
