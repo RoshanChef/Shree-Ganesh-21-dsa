@@ -110,11 +110,11 @@ int main()
      // bitwise operator & | ^ ~ returns a number
      int val1 = 10, val2 = 6;
 
+     cout << "Bitwise ~ " << (~val1) << endl;
      cout << "Bitwise & " << (val1 & val2) << endl;
-     cout << "Bitwise | " << (val1 | val2) << endl;
      cout << "Bitwise ^ " << (val1 ^ val2) << endl;
-     cout << "Bitwise ~ " << (~val1) << endl
-          << endl;
+     cout << "Bitwise | " << (val1 | val2) << endl;
+
 
      x = 0, y = 1;
      val = 0 & x++;

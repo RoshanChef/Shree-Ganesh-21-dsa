@@ -45,6 +45,7 @@ void prime_1_n(int n)
             cout << i << " ";
     }
 }
+
 int main()
 {
     int n;

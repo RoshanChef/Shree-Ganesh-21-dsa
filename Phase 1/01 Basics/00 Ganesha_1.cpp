@@ -16,7 +16,7 @@ int main()
   cout << "integer value " << i << endl;
 
   // unsigned int u_i = -231;
-  unsigned u_i = 231; // unsigned int => unsigned11
+  unsigned u_i = 231; // unsigned int => unsigned
   // greater number
   cout << "unsigned value " << u_i << endl;
 

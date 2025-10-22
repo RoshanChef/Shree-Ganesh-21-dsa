@@ -174,13 +174,14 @@ int main()
 
     /*
         ceil value
-        -- ⌈fr/n⌉=(fr+n−1)/n
+        -- ⌈fr/n⌉ = (fr + n − 1) / n
+        -- ⌈fr/n⌉ = (fr / n) + fr % n
     */
+
     int n = 5, m = 3;
+
     // int val = ceil((double)n / m);
     int val = (n + m - 1) / m;
-
-    // n / 2 + n % 2 ceil value
 
     cout << "ceil value " << val << endl;
 
