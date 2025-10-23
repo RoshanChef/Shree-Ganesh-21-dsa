@@ -17,7 +17,7 @@ int missingNum(vector<int> &arr)
     return xorr ^ n;
 }
 
-int missing_num(vector<int> &arr)
+int missing_num1(vector<int> &arr)
 {
     int n = arr.size() + 1;
     int sum = (1LL * n * (n + 1)) / 2;

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Time : O(N) Space : O(1)
 int secondLargestElement(vector<int> &ar)
 {
     int len = ar.size();
@@ -30,11 +31,6 @@ int secondLargestElement(vector<int> &ar)
 
     return sec_maxi == INT32_MIN ? -1 : sec_maxi;
 }
-
-/*
-Time : O(N)
-Space : O(1)T
-*/
 
 int main()
 {

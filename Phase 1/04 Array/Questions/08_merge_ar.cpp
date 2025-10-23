@@ -97,7 +97,8 @@ void mergeArrays3(vector<int> &a, vector<int> &b)
 
 int main()
 {
-    vector<int> a = {2, 4, 7, 10}, b = {1, 2, 5, 9, 11};
+    vector<int> a = {2, 4, 7, 10};
+    vector<int> b = {1, 2, 5, 9, 11};
     mergeArrays3(a, b);
 
     cout << "a values " << endl;
