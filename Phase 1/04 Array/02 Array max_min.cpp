@@ -39,10 +39,10 @@ int main()
     }
 
     int maxi = getMax(ar, size);
-    cout << "Maximum of given number is " << maxi << endl;
+    cout << "Maximum of given array is " << maxi << endl;
 
     int mini = getMin(ar, size);
-    cout << "Minimum of given Numbers is " << mini << endl;
+    cout << "Minimum of given array is " << mini << endl;
 
     cout << max(90, 10) << endl;
 
