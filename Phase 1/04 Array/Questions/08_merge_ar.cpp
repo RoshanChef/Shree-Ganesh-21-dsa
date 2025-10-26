@@ -65,7 +65,7 @@ void mergeArrays3(vector<int> &a, vector<int> &b)
     int m = b.size();
 
     // celing value
-    int gap = (n + m + 1) / 2;
+    int gap = n + m / 2 + n + m % 2;
 
     while (gap)
     {
@@ -91,7 +91,7 @@ void mergeArrays3(vector<int> &a, vector<int> &b)
         }
 
         // celing valuef
-        gap = (gap > 1) ? (gap + 1) / 2 : 0;
+        gap = (gap > 1) ? gap / 2 + gap % 2 : 0;
     }
 }
 
