@@ -22,7 +22,7 @@ int main()
     pq.push(2);
     pq.push(3);
     pq.push(4);
-    cout << pq.top() << endl;
+    cout << pq.top() << endl; 
 
     // min heap
     priority_queue<int, vector<int>, greater<int>> gt;
